@@ -230,12 +230,13 @@ $ git remote add origin https://https://github.com/user/hellogo
 使用 ```git add``` 与 ```git commit``` 提交修改：
 ```
 $ git add hellogo.go
-$ git commit -m "Hello,Go"
+$ git commit -m "Hello,Go!"
 ```
 使用 ```git push``` 推送本地内容到远程库：
 ```
 $ git push -u origin master
 ```
-会提示输入用户名和密码，输入成功即可将本地库推送到 Github 上。从现在起，只要本地作了提交，就可以通过命令 ```git push``` 把本地 ```master``` 分支的最新修改推送至 Github，现在，你就拥有了真正的分布式版本库。
+由于远程库是空的，我们第一次推送master分支时，加上了 ```-u``` 参数，Git 不但会把本地的 ```master``` 分支内容推送的远程新的 ```master``` 分支，还会把本地的 ```master``` 分支和远程的 ```master``` 分支关联起来，在以后的推送或者拉取时就可以简化命令。
+按提示输入用户名和密码后，即可将本地库推送到 Github 上。从现在起，只要本地作了提交，就可以通过命令 ```git push``` 把本地 ```master``` 分支的最新修改推送至 Github，现在，你就拥有了真正的分布式版本库。
 
 
